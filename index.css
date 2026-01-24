@@ -1,0 +1,7 @@
+@tailwind base;@tailwind components;@tailwind utilities;html{scroll-behavior:smooth;}
+.swiper {
+  touch-action: pan-y;
+}
+input[type="date"] {
+  color-scheme: dark;
+}
