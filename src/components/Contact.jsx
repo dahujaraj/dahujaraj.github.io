@@ -99,7 +99,7 @@ Contact Us      </h2>
   >
     Request a Site Visit / Get a Quote
   </button>
-
+</form>
  {/* <div className="col-span-2 pt-6 border-t border-royal text-center text-base sm:text-lg font-medium space-y-2">
   <p>📧 dahujaraj@gmail.com</p>
   <p>📞 +91 9837374160</p>
@@ -166,7 +166,7 @@ Contact Details </h4>
   </p>
 
 </div>
-</form>
+
  {submitted && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
           <div className="bg-[#111] border border-royal p-8 rounded-xl text-center">
