@@ -1,22 +1,39 @@
-import React from 'react'
+import React,{useState} from 'react'
 import InstagramEmbed from './InstagramEmbed'
-export default function Contact(){return(<section id="contact" className="py-16 sm:py-24 bg-[#120f0c]">
+
+
+
+export default function Contact(){
+  
+    const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const form = e.target
+    const data = new FormData(form)
+
+    await fetch("/", {
+      method: "POST",
+      body: data,
+    })
+
+    setSubmitted(true)
+    form.reset()
+  }
+  return(<section id="contact" className="py-16 sm:py-24 bg-[#120f0c]">
     <h2 className="font-display text-3xl sm:text-4xl text-royal mb-6 text-center">
 Contact Us      </h2>
 
     <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-1 gap-8">
-    {/* <form name="contact" method="POST" data-netlify="true" className="space-y-4">
-        <input type="hidden" name="form-name" value="contact"/>
-        <input name="name" placeholder="Name" className="w-full p-3 bg-black border border-royal"/>
-        <input name="email" placeholder="Email" className="w-full p-3 bg-black border border-royal"/>
-        <textarea name="message" placeholder="Message" className="w-full p-3 bg-black border border-royal"/>
-        <button className="bg-royal text-black px-6 py-3 w-full sm:w-auto">Send Enquiry</button></form> */}
+
 <form
   name="event-enquiry"
   method="POST"
   data-netlify="true"
   data-netlify-honeypot="bot-field"
   className="grid grid-cols-1 md:grid-cols-2 gap-4"
+          onSubmit={handleSubmit}
+
 >
   <input type="hidden" name="form-name" value="event-enquiry" />
   <input type="hidden" name="bot-field" />
@@ -146,4 +163,18 @@ Contact Details </h4>
 
 </div>
 </form>
+ {submitted && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+          <div className="bg-[#111] border border-royal p-8 rounded-xl text-center">
+            <h3 className="text-royal text-xl mb-2">Thank You</h3>
+            <p>Your enquiry has been submitted successfully.</p>
+            <button
+              className="mt-4 text-royal underline"
+              onClick={() => setSubmitted(false)}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 </div></section>)}
