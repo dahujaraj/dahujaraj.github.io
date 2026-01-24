@@ -8,18 +8,21 @@ export default function Contact(){
     const [submitted, setSubmitted] = useState(false)
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    const form = e.target
-    const data = new FormData(form)
+  e.preventDefault()
+  const form = e.target
 
-    await fetch("/", {
-      method: "POST",
-      body: data,
-    })
+  const formData = new FormData(form)
+  const encoded = new URLSearchParams(formData).toString()
 
-    setSubmitted(true)
-    form.reset()
-  }
+  await fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encoded,
+  })
+
+  alert("Form submitted successfully")
+  form.reset()
+}
   return(<section id="contact" className="py-16 sm:py-24 bg-[#120f0c]">
     <h2 className="font-display text-3xl sm:text-4xl text-royal mb-6 text-center">
 Contact Us      </h2>
