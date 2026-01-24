@@ -27,7 +27,7 @@ export default function Contact(){
     <h2 className="font-display text-3xl sm:text-4xl text-royal mb-6 text-center">
 Contact Us      </h2>
 
-    <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-1 gap-8">
+    <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-1">
 
 <form
   name="event-enquiry"
@@ -107,8 +107,9 @@ Contact Us      </h2>
   <p> City Convention Centre, Kailashpur, Saharanpur Dehradun Highway.
 </p>
 </div> */}
+<div className="col-span-2 flex justify-center pt-6 border-t border-royal">
+  <div className="mt-12 flex flex-col items-center text-center space-y-4 max-w-xl w-full">
 
-<div className="mt-12 flex flex-col items-center text-center space-y-4 col-span-2 pt-6 border-t border-royal text-center text-base sm:text-lg font-medium space-y-2">
  <h4 className="font-display text-2xl sm:text-4xl text-royal mb-6 text-center">
 Contact Details </h4>
   <p className="text-lg sm:text-xl font-medium">
@@ -166,7 +167,7 @@ Contact Details </h4>
   </p>
 
 </div>
-
+</div>
  {submitted && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
           <div className="bg-[#111] border border-royal p-8 rounded-xl text-center">
