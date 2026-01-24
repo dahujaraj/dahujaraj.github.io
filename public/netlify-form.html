@@ -9,6 +9,65 @@
     >
       <input type="hidden" name="form-name" value="event-enquiry" />
       <input type="hidden" name="bot-field" />
+
+
+  <input name="fullName" placeholder="Full Name" className="col-span-1 p-3 bg-black border border-royal rounded" required />
+  <input type="tel" name="phone" placeholder="Phone Number" className="col-span-1 p-3 bg-black border border-royal rounded" required />
+
+  <input type="email" name="email" placeholder="Email Address" className="col-span-1 p-3 bg-black border border-royal rounded" required />
+  <select name="eventType" className="col-span-1 p-3 bg-black border border-royal rounded">
+    <option>Event Type</option>
+    <option>Wedding</option>
+    <option>Corporate Meeting</option>
+    <option>Birthday / Social</option>
+    <option>Exhibition</option>
+    <option>Other</option>
+  </select>
+
+  <input type="number" name="guestCount" placeholder="Estimated Guest Count" className="col-span-1 p-3 bg-black border border-royal rounded" />
+  <select name="venue" className="col-span-1 p-3 bg-black border border-royal rounded">
+    <option>Preferred Venue</option>
+    <option>Grand Ballroom</option>
+    <option>Emerald Hall</option>
+    <option>Crystal Hall</option>
+    <option>The Gardens</option>
+    <option>Poolside</option>
+    <option>Terrace Lounge</option>
+  </select>
+
+  <input type="date" name="eventDate" className="col-span-1 p-3 bg-black border border-royal rounded" />
+
+  <select name="catering" className="col-span-1 p-3 bg-black border border-royal rounded">
+    <option>Catering Preference</option>
+    <option>Pure Veg</option>
+    <option>Non-Veg</option>
+    <option>Both</option>
+  </select>
+
+  <div className="col-span-2 text-sm space-y-2">
+    <p className="text-royal">Room Requirements</p>
+    <label className="mr-4"><input type="checkbox" name="rooms" value="Deluxe" /> Deluxe Rooms</label>
+    <label><input type="checkbox" name="rooms" value="Suite" /> Suite Room</label>
+  </div>
+
+  <select name="decoration" className="col-span-1 p-3 bg-black border border-royal rounded">
+    <option>Decoration Required?</option>
+    <option>Yes</option>
+    <option>No</option>
+  </select>
+
+  <input name="decorationDetails" placeholder="If yes, decoration details" className="col-span-1 p-3 bg-black border border-royal rounded" />
+
+  <textarea name="otherRequirements" placeholder="Any other requirements" className="col-span-2 p-3 bg-black border border-royal rounded" />
+
+  <textarea name="message" placeholder="Message / Special Requests" rows="4" className="col-span-2 p-3 bg-black border border-royal rounded" />
+
+  <button
+    type="submit"
+    className="col-span-2 bg-royal text-black px-8 py-3 rounded hover:opacity-90 transition"
+  >
+    Request a Site Visit / Get a Quote
+  </button>
     </form>
   </body>
 </html>
