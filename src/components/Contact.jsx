@@ -33,6 +33,7 @@ Contact Us      </h2>
   data-netlify-honeypot="bot-field"
   className="grid grid-cols-1 md:grid-cols-2 gap-4"
           onSubmit={handleSubmit}
+          action="/"
 
 >
   <input type="hidden" name="form-name" value="event-enquiry" />
