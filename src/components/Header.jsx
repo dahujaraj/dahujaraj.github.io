@@ -21,7 +21,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden sm:flex gap-6 text-sm uppercase tracking-wider">
+        <nav className="hidden sm:flex gap-6 text-sm tracking-wider font-display ">
           {links.map(l => (
             <a key={l.name} href={l.href} className="hover:text-royal transition">
               {l.name}
