@@ -6,6 +6,8 @@ import Gallery from './components/Gallery'
 import Events from './components/Events'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Testimonials from "./components/Testimonials"
+
 import { useRef } from 'react'
 export default function App(){
      const galleryRef = useRef(null)
@@ -16,4 +18,4 @@ export default function App(){
   }
 
     
-    return(<div className="font-body"><Header/><Hero/><About/><Gallery ref={galleryRef} /><Events openGallery={openGallery} /><Contact/><Footer/></div>)}
+    return(<div className="font-body"><Header/><Hero/><About/><Gallery ref={galleryRef} /><Events openGallery={openGallery} /><Testimonials /> <Contact/><Footer/></div>)}
