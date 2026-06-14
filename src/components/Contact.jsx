@@ -129,7 +129,7 @@ Contact Details </h4>
     </a>
   </p>
    <p className="text-lg sm:text-xl font-medium">
-    📞 <a href="tel:+919259149003" className="hover:text-royal transition">
+    📞 <a href="tel:+918923093900" className="hover:text-royal transition">
      +91 8923093900
     </a>
   </p>
