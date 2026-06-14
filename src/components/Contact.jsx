@@ -117,22 +117,23 @@ Contact Details </h4>
       dahujaraj@gmail.com
     </a>
   </p>
-
+<p className="text-lg sm:text-xl font-medium">
+    📞 <a href="tel:+918923093900" className="hover:text-royal transition">
+     +91 8923093900
+    </a>
+  </p>
+    <p className="text-lg sm:text-xl font-medium">
+    📞 <a href="tel:+919259149003" className="hover:text-royal transition">
+     +91 9259149003
+    </a>
+  </p>
   <p className="text-lg sm:text-xl font-medium">
     📞 <a href="tel:+919837374160" className="hover:text-royal transition">
      +91 9837374160
     </a>
   </p>
-  <p className="text-lg sm:text-xl font-medium">
-    📞 <a href="tel:+919259149003" className="hover:text-royal transition">
-     +91 9259149003
-    </a>
-  </p>
-   <p className="text-lg sm:text-xl font-medium">
-    📞 <a href="tel:+918923093900" className="hover:text-royal transition">
-     +91 8923093900
-    </a>
-  </p>
+
+   
   <div className="flex justify-center gap-6 mt-4">
 
     {/* Instagram */}
